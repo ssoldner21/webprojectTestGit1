@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Skeltor</title>
+	<script>
+		function redirectToGoogle()
+		{
+			location.href ="http://www.google.com";
+		};
+	
+		function flipImage(object)
+		{
+			if (object.src == "bird.jpg")
+			{
+				object.src="bird2.jpg";
+			}
+			else
+			{
+				object.src="bird.jpg";
+			}
+		};
+		
+		
+	</script>
+	
+</head>
+<body>
+	<p>Here is some content</p>
+	
+	<p>
+		<script>
+			var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+			var today = new Date();
+			document.write(today.getHours() + ":" + today.getMinutes() + " ");
+		</script>
+	</p>
+	<p>
+		Happy <script>document.write(dayNames[today.getDay()]);</script>!<br />
+		The dayNames array has <script>document.write(dayNames.length);</script> elements.<br />
+		The day names are
+		<script>
+		for(var name in dayNames)
+		{
+			document.write(name + "<br />");
+		}
+		
+		</script>
+	</p>
+	<p>
+	<script>
+		document.write(location.href);
+	</script>
+	</p>
+	<input type="button" onclick="redirectToGoogle()">Click Me</input>
+	
+	<img onmouseover="flipImage(this)" onclick="flipImage(this)" src="bird.jpg" />
+	
+</body>
+
+</html>
